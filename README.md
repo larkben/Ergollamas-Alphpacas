@@ -1,2 +1,15 @@
-# Ergollamas-Alphpacas
-The home for everything Ergollama and Alphpaca.
+<h1> Ergollamas-Alphpacas </h1>
+<h2> The home for everything Ergollama and Alphpaca. </h2>
+
+<h2> Welcome to ErgoLlamas a passion project on Ergo. We are a collection of NFT (64px x 64px) chill Llamas. (Some more chill than others  ) The world might be filled with drama but we are working towards a brighter future of finance. Together. </h2>
+
+<br>
+
+<h2> Some Quick Facts: </h2>
+Supply: 128 Llamas
+<h2> Mint Addresses: </h2> 
+<b> 9i27sKZ1gdZtnkbEsL1jkbnosZh3pHi9tZiwMLmi6tcwjmRQMhz </b>
+<b> 9fUQLJrVtx5rZXib1NDSMDupkfzHfy3Wrh2Mp8Ae8Rv8Y59wD5U </b>
+<i> It is crucial you only buy from these mint address! <i>
+<h2> Founded: Our project was founded on April 8th of 23' </h2>
+Our Mint Price: FREE
