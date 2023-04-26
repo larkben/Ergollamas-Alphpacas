@@ -1,7 +1,7 @@
 <h1> Ergollamas-Alphpacas </h1>
 <h2> The home for everything Ergollama and Alphpaca. </h2>
 
-Welcome to ErgoLlamas a passion project on Ergo. We are a collection of NFT (64px x 64px) chill Llamas. (Some more chill than others  ) The world might be filled with drama but we are working towards a brighter future of finance. Together.
+Welcome to ErgoLlamas + Alphpacas a passion project on Ergo and Alephium. We are a collection of NFT (64px x 64px) chill Llamas or Alpacas. (Some more chill than others  ) The world might be filled with drama but we are working towards a brighter future of finance. Together.
 
 <br>
 
