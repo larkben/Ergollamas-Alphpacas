@@ -1,0 +1,14 @@
+{
+  "name": "discord",
+  "version": "1.0.0",
+  "description": "discord bot for Ergollamas and Alphpacas",
+  "main": "index.js",
+  "scripts": {
+    "test": "node discord.js"
+  },
+  "author": "Benjamin Larkey",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.9.0"
+  }
+}
