@@ -5,16 +5,18 @@ const path = require('node:path');
 
 const commands = [];
 
-let numberCommands = 1;
+// commands
+required_commands = ['./commands/ping', './commands/database-connection.js']
+// end of commands
 
-for (let a = 0; a < numberCommands; a++) {
-	const command = require('./commands/ping');
+required_commands.forEach((filePath) => {
+	const command = require(path.resolve(filePath));
 	if ('data' in command && 'execute' in command) {
 		commands.push(command.data.toJSON());
 	} else {
 		console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`);
 	}
-}
+});
 
 // Construct and prepare an instance of the REST module
 const rest = new REST().setToken(token);
