@@ -5,7 +5,7 @@ module.exports = {
 		.setName('ping')
 		.setDescription('Checks to see if the discord bot is online.'),
 	async execute(interaction) {
-		return interaction.reply('Pong!');
+		return interaction.reply({ content: 'Secret Pong!', ephemeral: true });
 	},
 };
 

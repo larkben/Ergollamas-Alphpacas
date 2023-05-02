@@ -12,8 +12,8 @@ module.exports = {
         // This will be to check if the game is online.
 		const connection = mysql.createConnection(process.env.DATABASE_URL)
 		console.log('Connected to PlanetScale!')
-		console.log(interaction.member.id)
+		console.log(interaction.member.id, "has just requested ping.")
 		connection.end()
-		return interaction.reply('DataPong')
+		return interaction.reply({ content: 'Secret Data! The Database is Online', ephemeral: true });
 	},
 };
