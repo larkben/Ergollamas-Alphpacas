@@ -4,20 +4,33 @@ require('dotenv').config()
 
 // Database is from a protected file; to use your own create your own
 
+// Given is the userID and the triviaPT
+
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('register')
-		.setDescription('Registers you in the Ergollamas server!'),
+		.setDescription('Registers you in the Ergollamas server!')
+        .addStringOption(option =>
+            option.setName('ergo')
+                .setDescription('Ergo Address; can be changed later, but set to where you hold your llama.')
+                .setRequired(true))
+        .addStringOption(option =>
+            option.setName('nickname')
+                .setDescription('Nickname; this is more cosmetic than anything else.')
+                .setRequired(false)),
 	async execute(interaction) {
+        // Fetch Arguments
+        const ergo = interaction.options.getString('ergo');
+        const nickname = interaction.options.getString('nickname');
+        const start_points = 0;
         // This will be to check if the game is online.
 		const connection = mysql.createConnection(process.env.DATABASE_URL)
 		console.log('Connected to PlanetScale!')
-		console.log(interaction.member.id, "has just requested new user.")
-        // Data Input
-
+		console.log(interaction.member.id, "has just requested new user, with the ergo address", ergo)
+        // Data Input and Duplication Checks
         const userId = interaction.member.id;
 
-        const sql = `SELECT * FROM users WHERE userID='${userId}'`;
+        const sql = `SELECT * FROM ergollamas WHERE userID='${userId}'`;
 
         connection.query(sql, function (error, results, fields) {
             if (error) throw error;
@@ -28,7 +41,7 @@ module.exports = {
             
               // handle case where user already exists
             } else {
-                const sql_data = `INSERT INTO users (userID) VALUES ('${userId}')`; // Overwritten
+                const sql_data = `INSERT INTO ergollamas (userID, ergoID, nickname, triviaPT) VALUES ('${userId}', '${ergo}', '${nickname}', '${start_points}')`; // Overwritten
   
                 connection.query(sql_data, function (error, results, fields) {
                     if (error) throw error;
