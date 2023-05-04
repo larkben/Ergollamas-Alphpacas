@@ -8,7 +8,7 @@ Ergo Supply: 128 Llamas <br>
 Alpehium Supply: 128 Alpacas
 <h2> Ergo Mint Addresses: </h2> 
 <b> 9i27sKZ1gdZtnkbEsL1jkbnosZh3pHi9tZiwMLmi6tcwjmRQMhz </b> <br>
-<b> 9fUQLJrVtx5rZXib1NDSMDupkfzHfy3Wrh2Mp8Ae8Rv8Y59wD5U </b> <br>
+<b> 9hXf8m6yYs6PexBLPv9cvzx6aLRMFRpb4Zv582rEFf1YpR8zh9c </b> <br>
 <h2> Alephium Mint Addresses: </h2>
 <p> Nothing Yet </p>
 <br>
