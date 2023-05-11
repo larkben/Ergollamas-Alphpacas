@@ -9,11 +9,15 @@ require('dotenv').config()
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('register')
-		.setDescription('Registers you in the Ergollamas server!')
+		.setDescription('Registers you in the Ergollamas and Alphpacas server!')
         .addStringOption(option =>
             option.setName('ergo')
                 .setDescription('Ergo Address; can be changed later, but set to where you hold your llama.')
-                .setRequired(true))
+                .setRequired(false))
+        .addStringOption(option =>
+            option.setName('alph')
+                .setDescription('Alephium Address; can be changed later, but set to where you hold your alpaca.')
+                .setRequired(false))
         .addStringOption(option =>
             option.setName('nickname')
                 .setDescription('Nickname; this is more cosmetic than anything else.')
@@ -21,12 +25,15 @@ module.exports = {
 	async execute(interaction) {
         // Fetch Arguments
         const ergo = interaction.options.getString('ergo');
+        const alph = interaction.options.getString('alph');
         const nickname = interaction.options.getString('nickname');
         const start_points = 0;
+
         // This will be to check if the game is online.
 		const connection = mysql.createConnection(process.env.DATABASE_URL)
 		console.log('Connected to PlanetScale!')
-		console.log(interaction.member.id, "has just requested new user, with the ergo address", ergo)
+		console.log(interaction.member.id, "has just requested new user, with the ergo/alph address(s)", ergo, alph)
+
         // Data Input and Duplication Checks
         const userId = interaction.member.id;
 
@@ -41,7 +48,7 @@ module.exports = {
             
               // handle case where user already exists
             } else {
-                const sql_data = `INSERT INTO ergollamas (userID, ergoID, nickname, triviaPT) VALUES ('${userId}', '${ergo}', '${nickname}', '${start_points}')`; // Overwritten
+                const sql_data = `INSERT INTO ergollamas (userID, ergoID, alphID, nickname, triviaPT) VALUES ('${userId}', '${ergo}', '${alph}', '${nickname}', '${start_points}')`; // Overwritten
   
                 connection.query(sql_data, function (error, results, fields) {
                     if (error) throw error;
