@@ -13,8 +13,8 @@ module.exports = {
                 .setDescription('New Ergo Address.')
                 .setRequired(false))
         .addStringOption(option =>
-            option.setName('ergo')
-                .setDescription('New Ergo Address.')
+            option.setName('alph')
+                .setDescription('New Alephium Address.')
                 .setRequired(false))
         .addStringOption(option =>
             option.setName('nickname')
