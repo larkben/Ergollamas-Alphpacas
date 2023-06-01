@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require('discord.js');
 const mysql = require('mysql2')
 require('dotenv').config()
 
-// Database is from a protected file; to use your own create your own
+// Database is from a protected file; to use your own implementation create your own
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -13,11 +13,16 @@ module.exports = {
                 .setDescription('New Ergo Address.')
                 .setRequired(false))
         .addStringOption(option =>
+            option.setName('alph')
+                .setDescription('New Alephium Address.')
+                .setRequired(false))
+        .addStringOption(option =>
             option.setName('nickname')
                 .setDescription('New Nickname.')
                 .setRequired(false)),
 	async execute(interaction) {
         const ergo = interaction.options.getString('ergo');
+        const alph = interaction.options.getString('alph');
         const nickname = interaction.options.getString('nickname');
         const userId = interaction.member.id;
 
@@ -27,6 +32,9 @@ module.exports = {
         let sql = `UPDATE ergollamas SET `;
         if (ergo) {
             sql += `ergoID='${ergo}' `;
+        }
+        if (alph) {
+            sql += `alphID='${alph}' `;
         }
         if (nickname) {
             sql += `nickname='${nickname}' `;
