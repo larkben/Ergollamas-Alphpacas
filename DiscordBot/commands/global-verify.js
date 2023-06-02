@@ -2,6 +2,7 @@ const { SlashCommandBuilder } = require('discord.js');
 const mysql = require('mysql2')
 require('dotenv').config()
 
+// Token Verification Functions
 async function get_token(address, mint_address) {
     const url = `https://api.ergoplatform.com/api/v1/addresses/${address}/balance/confirmed`;
     let valid_tokens = 0;
@@ -60,11 +61,13 @@ async function check_mint(token_ID, mint_address) {
     }
 }
 
+// Start of Discord Function Implementation
+
 const mint_address = '9i27sKZ1gdZtnkbEsL1jkbnosZh3pHi9tZiwMLmi6tcwjmRQMhz'
 
 module.exports = {
     data: new SlashCommandBuilder()
-      .setName('global-update')
+      .setName('global-verify')
       .setDescription('Updates all users and their llama ownership and holdings'),
     async execute(interaction) {
       const connection = mysql.createConnection(process.env.DATABASE_URL);

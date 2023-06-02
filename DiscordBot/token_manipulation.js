@@ -14,7 +14,7 @@
 
 // Getting all tokens from the address matching a specific mint address
 
-export async function get_token(address, mint_address) {
+async function get_token(address, mint_address) {
   const url = `https://api.ergoplatform.com/api/v1/addresses/${address}/balance/confirmed`;
   let valid_tokens = 0;
 

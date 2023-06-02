@@ -6,7 +6,8 @@ const path = require('node:path');
 const commands = [];
 
 // commands
-required_commands = ['./commands/ping', './commands/database-connection.js', './commands/register.js', './commands/unregister.js', './commands/edit_user.js', './commands/global-update.js']
+required_commands = ['./commands/ping', './commands/database-connection.js', './commands/register.js', './commands/unregister.js', './commands/edit_user.js', 
+'./commands/global-verify.js', './commands/verify-holding.js']
 // end of commands
 
 required_commands.forEach((filePath) => {
