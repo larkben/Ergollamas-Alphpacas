@@ -12,9 +12,9 @@
 //const url = `https://api.ergoplatform.com/api/v1/addresses/${address}/balance/confirmed`
 //const url_token = `https://api.ergoplatform.com/api/v0/assets/${tokenID}/issuingBox`
 
-// Getting all tokens from the address
+// Getting all tokens from the address matching a specific mint address
 
-async function get_token(address) {
+async function get_token(address, mint_address) {
   const url = `https://api.ergoplatform.com/api/v1/addresses/${address}/balance/confirmed`;
   let valid_tokens = 0;
 
@@ -28,7 +28,7 @@ async function get_token(address) {
 
     for (const token of data.tokens) {
       const ID = token.tokenId;
-      if (await check_mint(ID, '9i27sKZ1gdZtnkbEsL1jkbnosZh3pHi9tZiwMLmi6tcwjmRQMhz') === 1) {
+      if (await check_mint(ID, mint_address) === 1) { 
         valid_tokens += 1;
       }
     }
@@ -38,6 +38,8 @@ async function get_token(address) {
     console.log(error.message);
   }
 }
+
+// Sub Function for get_token()
 
 async function check_mint(token_ID, mint_address) {
   const url_token = `https://api.ergoplatform.com/api/v0/assets/${token_ID}/issuingBox`;
@@ -50,11 +52,17 @@ async function check_mint(token_ID, mint_address) {
     }
 
     const data = await response.json();
-    const firstEntry = data[0];
+
+    const firstEntry = data[0]; // the first parameter; in this case tokens
+
+    //console.log(firstEntry);
+
     const address = firstEntry.address;
 
     if (mint_address === address) {
-      console.log("The Token is Valid, welcome to Ergollamas");
+      //console.log("The Token is Valid, ", firstEntry.assets); // Validation and Name of Token; plus any other relevant info.
+
+      console.log("The token is valid"); // Simple; no "boilerplay"
       is_valid = true;
     }
 
@@ -65,7 +73,7 @@ async function check_mint(token_ID, mint_address) {
 }
 
 // Usage:
-get_token('9eo3TX7MXiNn9xbHTrgK21dEbQbSDpJNj9ybo3deoubzYVHkjD8')
+get_token('9eo3TX7MXiNn9xbHTrgK21dEbQbSDpJNj9ybo3deoubzYVHkjD8', '9i27sKZ1gdZtnkbEsL1jkbnosZh3pHi9tZiwMLmi6tcwjmRQMhz')
   .then(validTokens => {
     console.log("This user has", validTokens, "valid tokens");
   });
