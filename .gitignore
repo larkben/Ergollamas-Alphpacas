@@ -3,3 +3,4 @@ node_modules
 config.json
 .DS_STORE
 todo.txt
+rust_ergo_llamas/target
