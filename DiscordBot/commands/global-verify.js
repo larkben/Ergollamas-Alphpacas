@@ -4,26 +4,26 @@ require('dotenv').config()
 
 // Token Verification Functions
 async function get_token(address, mint_address) {
-    const url = `https://api.ergoplatform.com/api/v1/addresses/${address}/balance/confirmed`;
-    let valid_tokens = 0;
+    const url = `https://api.ergoplatform.com/api/v1/addresses/${address}/balance/confirmed`; // api call
+    let valid_tokens = 0; // total user valid tokens
   
     try {
-      const response = await fetch(url);
-      if (!response.ok) {
+      const response = await fetch(url); // await lets the api reach before continuing
+      if (!response.ok) { // '!' makes it not okay
         throw new Error('Error: Failed to retrieve data');
       }
   
-      const data = await response.json();
+      const data = await response.json(); // wait for the json
   
-      for (const token of data.tokens) {
-        const ID = token.tokenId;
-        if (await check_mint(ID, mint_address) === 1) { 
-          valid_tokens += 1;
+      for (const token of data.tokens) { // loop through elements in json
+        const ID = token.tokenId; // shorthand / json output path
+        if (await check_mint(ID, mint_address) === 1) { // checks the validity of the token and parent function waits
+          valid_tokens += 1; // should it be accepted then + 1
         }
       }
   
-      return valid_tokens;
-    } catch (error) {
+      return valid_tokens; // returns the valid tokens
+    } catch (error) { // error handling
       console.log(error.message);
     }
 }
@@ -31,8 +31,8 @@ async function get_token(address, mint_address) {
 // Sub Function for get_token()
   
 async function check_mint(token_ID, mint_address) {
-    const url_token = `https://api.ergoplatform.com/api/v0/assets/${token_ID}/issuingBox`;
-    let is_valid = false;
+    const url_token = `https://api.ergoplatform.com/api/v0/assets/${token_ID}/issuingBox`; // api call
+    let is_valid = false; // boolean for token validity
   
     try {
       const response = await fetch(url_token);
@@ -49,10 +49,20 @@ async function check_mint(token_ID, mint_address) {
       const address = firstEntry.address;
   
       if (mint_address === address) {
-        //console.log("The Token is Valid, ", firstEntry.assets); // Validation and Name of Token; plus any other relevant info.
+        //------------------------------------
+        // Here you can customize your message
+        //------------------------------------
   
-        console.log("The token is valid"); // Simple; no "boilerplay"
+        // Example:
+        console.log("| Accepted |", firstEntry.assets[0].name, " | ", firstEntry.assets[0].tokenId, " |"); // Output: ()
+  
+        //console.log("The token is valid"); // Simple; no "boilerplay"
+  
         is_valid = true;
+      }
+  
+      else {
+        console.log("|  Denied  |", firstEntry.assets[0].name);
       }
   
       return is_valid ? 1 : 0;
