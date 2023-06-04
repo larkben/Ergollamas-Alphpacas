@@ -5,5 +5,5 @@ do
     node deploy-commands.js
     sleep 3 
     node index.js
-    sleep 500
+    sleep 10
 done
