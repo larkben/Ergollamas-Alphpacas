@@ -1,0 +1,13 @@
+These are notes for the project.
+
+Notes:
+
+To clear the terminal from print use: ''' print!("\x1B[2J\x1B[1;1H"); // clearing the terminal screen '''
+
+Package Notes:
+
+- Colored Terminal Output: https://stackoverflow.com/questions/69981449/how-do-i-print-colored-text-to-the-terminal-in-rust
+- Rust Executable (Release): https://stackoverflow.com/questions/60944480/how-do-i-make-a-rust-program-which-can-be-executed-without-using-cargo-run
+- Rich UI Library for Terminal: https://crates.io/crates/tui
+- More GUI: https://lib.rs/crates/winit
+
