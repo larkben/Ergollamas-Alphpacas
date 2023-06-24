@@ -5,13 +5,13 @@
 <p> Download the .zip of "Journey" or clone the github project. </p>
 
 <h2> Step 2: </h2>
-<p> <a href="https://www.rust-lang.org/tools/install" Rust Download> Click Here to install Rust for mac or Windows. </p>
+<p> <a href="https://www.rust-lang.org/tools/install"/> Click Here to install Rust for mac or Windows. </p>
 
-<<h2> Step 3: </h2>
+<h2> Step 3: </h2>
 <p> <b> Run "npm install" from inside the Jounrey folder where the folders "src" are present in your terminal. </b> </p>
 
 <h2> Step 4: </h2>
-<p> <b> Run (UI) "npm run tauri" or (Web) "npm run dev" from inside the Jounrey folder where the folders "src" are present in your terminal. </b> </p>
+<p> <b> Run (UI and Web) "npm run tauri dev" from inside the Jounrey folder where the folders "src" are present in your terminal. </b> </p>
 
 <h2> Step 5: </h2>
 <p> <b> Modify or use to your Alpaca mind limits. </b> </p>
