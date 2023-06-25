@@ -4,8 +4,8 @@ import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
 
 // My dependencies
-import { getToken } from "./token_manipulation";
-import { NFTInfo } from "./token_manipulation";
+import { getToken } from "./func/ergotoken";
+import { NFTInfo } from "./types/types";
 
 function App() {
   // ... useState and other declarations ...

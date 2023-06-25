@@ -1,27 +1,38 @@
-// Unlike most Ergo Docs this one will be easy.
+// Ergo and Alephium Token API Calls
 
-import { link } from "fs";
+// What do these functions do:
+// The aim of these functions is to verify the validity of tokens on ergo or alephium by seeing that the token is
+// authentic and is not a duplicate or fake.
+
+// Who are these calls for:
+// These calls are for anyone who wants to validate their users and their users want to validate their art. Can be used for token
+// and nft manipulation.
 
 // ${address}
 
-//const address = relevant info
-//const tokenID = relevant info
+//const address = address of user
+//const tokenID = token_id (allows us to find original mint address)
 
-// URL API Calls
+// URL API Calls (Ergo)
 
-// const url = `https://api.ergoplatform.com/api/v1/networkState`;
+//const url = `https://api.ergoplatform.com/api/v1/networkState`;
 //const url = `https://api.ergoplatform.com/api/v1/boxes/byAddress/${address}`;
 //const url = `https://api.ergoplatform.com/api/v1/addresses/${address}/balance/confirmed`
 //const url_token = `https://api.ergoplatform.com/api/v0/assets/${tokenID}/issuingBox`
 
-// Getting all tokens from the address matching a specific mint address
+// URL API Calls (Alephium)
 
-// Return Value for Functions (not important for you to know)
+//const url = `https://wallet.mainnet.alephium.org/infos/version`; // current mainnet
+//const url = `https://wallet.testnet.alephium.org/infos/version`; // current testnet
+
+//global node = web3.setCurrentNodeProvider(<nodeURL>)
+
+// Return Value for Functions (not important for you to know); if you need access to certain instances of the token these functions within this class will do it
 export class NFTInfo {
   private valid: boolean;
   private nftName: string;
   private tokenId: string;
-  private r9: string;
+  private r9: string; // Ergo Specific otherwise "null"
 
   constructor(valid: boolean, nftName: string, tokenId: string, r9: string) {
     this.valid = valid;
@@ -30,22 +41,42 @@ export class NFTInfo {
     this.r9 = r9;
   }
 
+  /**
+   * 
+   * @returns nftName (string)
+   */
   getName(): string {
     return this.nftName;
   }
 
+  /**
+   * 
+   * @returns valid (boolean)
+   */
   getValid(): boolean {
     return this.valid;
   }
 
+  /**
+   * 
+   * @returns tokenId (string)
+   */
   getTokenID(): string {
     return this.tokenId;
   }
 
+  /**
+   * 
+   * @returns r9 (string) (Ergo) ~ r9 is the Ergo Register to get the "ipfs" link to the nft image or token
+   */
   getR9(): string {
     return this.r9;
   }
 
+  /**
+   * 
+   * @returns (Ergo) returns a String to the ipfs image link
+   */
   getImageLink(): String {
     let link = resolveIpfs(toUtf8String(this.r9).substring(2));
     return link;
@@ -77,6 +108,8 @@ const nfts: NFTs = {
     return this.ergollamas.length;
   },
 };
+
+
 
 export async function getToken(address: string, mintAddress: string): Promise<NFTs | undefined> {
   const url = `https://api.ergoplatform.com/api/v1/addresses/${address}/balance/confirmed`;
@@ -163,7 +196,7 @@ export function toUtf8String(hex:string): String {
   }
     var str = '';
     for (var i = 0; i < hex.length; i += 2) {
-        str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+      str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
     }
     return str;
 }
