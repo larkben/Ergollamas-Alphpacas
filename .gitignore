@@ -3,4 +3,7 @@ node_modules
 config.json
 .DS_STORE
 todo.txt
-journey/target
+Journey\target
+Journey/target
+.rmeta
+.rlib
