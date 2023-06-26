@@ -1,17 +1,14 @@
-<h1> Ergollamas-Alphpacas </h1>
-<h2> The home for everything Ergollama and Alphpaca. </h2>
+<h1> Ergollamas-Alphpacas Utilties and Project </h1>
 
-Welcome to ErgoLlamas + Alphpacas a passion project on Ergo and Alephium. We are a collection of NFT (64px x 64px) chill Llamas or Alpacas. (Some more chill than others  ) The world might be filled with drama but we are working towards a brighter future of finance. Together.
-
-<h2> Some Quick Facts: </h2>
-Ergo Supply: 128 Llamas <br>
-Alpehium Supply: 128 Alpacas
-<h2> Ergo Mint Addresses: </h2> 
-<b> 9i27sKZ1gdZtnkbEsL1jkbnosZh3pHi9tZiwMLmi6tcwjmRQMhz </b> <br>
-<b> 9hXf8m6yYs6PexBLPv9cvzx6aLRMFRpb4Zv582rEFf1YpR8zh9c </b> <br>
-<h2> Alephium Mint Addresses: </h2>
-<p> Nothing Yet </p>
+<h2> Utilties: </h2>
+<b> Discord Bot </b> ~ <i> commands and db for the official server / verifies tokens </i> <br>
+<b> Game (in Progress) </b> ~ <i> basic framework </i> <br>
+<b> Journey </b> ~ <i> an alephium/ergo token verification tool </i> <br>
 <br>
-<i> It is crucial you only buy from these mint address! <i>
-<h2> Founded: Our project was founded on April 8th of 23' </h2>
-Our Mint Price: FREE
+<b> * ALL UTILITIES are OPEN SOURCE * </b>
+<br>
+<h2> Ergollama's: </h2>
+<p> Ergollamas can be found on the <a href="https://ergoplatform.org/en/"> Ergo Blockchain </a>. There exists a finite 128 llamas that contain hand drawn traits and are hand assembled and minted. Ergollama's and Alphpaca's share the same utilties and holders of either can look forward to seeing each other in game. While the flagship of this project might remain Alphpaca's due to Alephium's undeveloped Ecosystem we hope to make it so one day if you'd like; that we can bridge the two back and forth. </p>
+<br>
+<h2> Alphpaca's: </h2>
+<p> Alphpaca's is the flagship NFT collection of the <a href="https://alephium.org/"> Alephium Blockchain </a>. These are currently still in the art development phase. </p>
