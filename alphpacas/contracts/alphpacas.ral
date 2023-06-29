@@ -5,4 +5,3 @@ Contract ALPHpaca (
 ) implements INFTcollection {
     
 }
-
