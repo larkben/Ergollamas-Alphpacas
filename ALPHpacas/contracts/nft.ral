@@ -1,0 +1,7 @@
+// NFT contract for each ALPHpaca
+
+Contract NFT (
+    // PARAMS
+) implements INFT {
+    
+}

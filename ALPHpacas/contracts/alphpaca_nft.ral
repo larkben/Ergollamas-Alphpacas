@@ -1,0 +1,8 @@
+// NFT Contract for ALPHpacas and Mint
+
+Contract ALPHpaca (
+    // PARAMS
+) implements INFTcollection {
+    
+}
+
