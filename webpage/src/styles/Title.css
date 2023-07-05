@@ -1,0 +1,17 @@
+.Text {
+    background-color: #060a18;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(243, 69, 0);
+    padding-bottom: 0;
+}
+
+#alphpaca {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 5px;
+    font-size: 125px;
+    margin: 15px;
+}
