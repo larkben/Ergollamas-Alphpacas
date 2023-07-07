@@ -1,0 +1,108 @@
+.Text {
+    background-color: #060a18;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(243, 69, 0);
+    padding-bottom: 0;
+}
+
+.Description {
+    font-family: monospace;
+    width: 800px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+  
+img {
+    max-width: 100%
+}
+  
+.image {
+    flex-basis: 40%
+}
+  
+.text {
+    font-size: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* This is for the animated arrow */
+
+@-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -moz-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -moz-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -moz-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+  
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+  
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -moz-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -moz-transform: translateY(-15px);
+      -ms-transform: translateY(-15px);
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+  
+.arrow {
+    bottom: 50px;
+    left: 50%;
+    margin-left: -20px;
+    width: 128px;
+    height: 128px;
+    background-image: url(../assets/scrollOne.png);
+    background-size: contain;
+  }
+  
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+  
+.fade {
+    opacity:0;
+    transition: 1s all ease-out;
+  }

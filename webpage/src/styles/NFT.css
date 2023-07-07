@@ -1,0 +1,11 @@
+.Text {
+    background-color: #060a18;
+    min-height: 0vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(243, 69, 0);
+    padding-bottom: 0;
+}
+
