@@ -1,6 +1,8 @@
 // The about section
 import '../styles/About.css'
-import aboutLogo from '../assets/about.png'
+import aboutLogo from '../assets/about.png' //? should consider combining imports
+import teamLogo from '../assets/theTeam.png'
+import alephiumInfo from '../assets/whyAlephium.png'
 
 // Will need a new photo for the team section.
 
@@ -29,7 +31,7 @@ function About() {
                 <h1 style={{paddingBottom: 20, fontSize: 40}}> Who is the Team? </h1>
                 <div className='container'>
                     <div className='image'>
-                        <img src={aboutLogo} alt='ALPHpaca Example'/>
+                        <img src={teamLogo} alt='ALPHpaca Example'/>
                     </div>
                     <div className='Description text'>
                         <p>
@@ -39,8 +41,24 @@ function About() {
                             My Credentials:
                             I am a senior college student studying Software Development with as of now a minor in Finance.
                             I am fluent in most programming structures and syntax; I am mostly a fan of Rust and Typescript.
-
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div className='Text'>
+                <h1 style={{paddingBottom: 20, fontSize: 40}}> Why Alephium? </h1>
+                <div className='container'>
+                    <div className='Description text'>
+                        <p>
+                            Building on Alephium is personal choice and we strongly believe it will be a prosperous ecosystem in the future where ALPHpaca's will find the most opportunity
+                            and the most value.
+                            <br/> <br/>
+                            It is our mission to deliver ALPHpaca's with present and constantly evolving future utility; constantly pushing Alephium's innovative technology to
+                            it's limits.
+                        </p>
+                    </div>
+                    <div className='image'>
+                        <img src={alephiumInfo} alt='ALPHpaca Example'/>
                     </div>
                 </div>
             </div>
