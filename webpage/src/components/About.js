@@ -54,7 +54,7 @@ function About() {
                             and the most value.
                             <br/> <br/>
                             It is our mission to deliver ALPHpaca's with present and constantly evolving future utility; constantly pushing Alephium's innovative technology to
-                            it's limits.
+                            its limits.
                         </p>
                     </div>
                     <div className='image'>
