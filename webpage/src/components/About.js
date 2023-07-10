@@ -13,7 +13,7 @@ function About() {
             <div className='Text'>
                 <div className='Text whatisALPHpaca' style={{paddingLeft: 10, paddingRight: 10}}>
                     <h1 style={{paddingBottom: 20, fontSize: 40}}> <a name="section1"> What is an ALPHpaca? </a> </h1>
-                        <div className='container' style={{backgroundColor: 'rgba(0, 0, 25, 0.8)', padding: 25}}>
+                    <div className='container' style={{backgroundColor: 'rgba(0, 0, 25, 0.8)', padding: 25}}>
                         <div className='Description text'>
                             <p>
                                 ALPHpaca's are a sparkling water fueled project designed towards bringing open source utilties and Alephium compatible Dapps.

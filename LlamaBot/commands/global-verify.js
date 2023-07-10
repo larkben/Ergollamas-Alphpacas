@@ -92,7 +92,7 @@ module.exports = {
           // Access user properties using user.userID, user.ergoID, etc.
   
           let number_llamas = await get_token(user.ergoID, mint_address); // (Address, Mint_Address)
-          if (number_llamas !== null) {
+          if (number_llamas != null) {
             let sql = `UPDATE ergollamas SET llamas=${number_llamas} WHERE userID='${user.userID}'`;
   
             connection.query(sql, function (error, results, fields) {
