@@ -33,6 +33,7 @@ img {
     padding-right: 20px;
 }
 
+
 /* This is for the animated arrow */
 
 @-moz-keyframes bounce {
@@ -106,3 +107,7 @@ img {
     opacity:0;
     transition: 1s all ease-out;
   }
+
+.whatisALPHpaca {
+  background-image: url(../assets/asperiteCreation.png);
+}
