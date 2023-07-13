@@ -58,7 +58,9 @@ To meet or stay updated with ALPHpaca news and updates you can join our Discord 
                     </div>
                 </div>
             </div>
-            <Distribution/>
+            <div>
+                <Distribution/>
+            </div>
         </div>
     );
 }
