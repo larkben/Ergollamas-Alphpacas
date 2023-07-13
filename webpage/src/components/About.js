@@ -3,9 +3,14 @@ import '../styles/About.css'
 
 import React, { useEffect, useRef, useState } from 'react';
 import Typed from 'typed.js';
+import Distribution from './Distribution';
+
+import ALPHpaca from "../assets/92.png"
 
 function About() {
     const textRef = useRef(null);
+
+    const [showPicture, setShowPicture] = useState(false);
 
     const intro = `Hello, welcome to ALPHpacas,
 
@@ -19,6 +24,9 @@ To meet or stay updated with ALPHpaca news and updates you can join our Discord 
         const options = {
             strings: [intro],
             typeSpeed: 20,
+            onComplete: () => {
+                setShowPicture(true);
+            }
 
         };
     
@@ -34,12 +42,21 @@ To meet or stay updated with ALPHpaca news and updates you can join our Discord 
 
     return (
         <div>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+            </style>
             <div className='Text'>
                 <div style={{alignContent: 'center'}}>
-                    <h1> A little about us... </h1>
-                    <p className='css-fix' ref={textRef} style={{maxWidth: 850}}>{intro}</p>
+                    <h1 style={{fontFamily: 'VT323, monospace'}}> A little about us... </h1>
+                    <div className='container rcorners1' style={{backgroundColor: 'orangered', padding: 30, height: 650}}>
+                        <p className='css-fix text typed-cursor' ref={textRef} style={{minWidth: 550, maxWidth: 550, color: '#060a18', fontFamily: 'VT323, monospace'}}>{intro}</p>
+                        <div className='rcorners1' style={{backgroundColor: '#060a18', padding: 15}}>
+                            <img src={ALPHpaca} alt='ALPHpaca' />
+                        </div>
+                    </div>
                 </div>
             </div>
+            <Distribution/>
         </div>
     );
 }

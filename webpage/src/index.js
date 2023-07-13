@@ -4,6 +4,7 @@ import './styles/index.css';
 
 import Title from './components/Title'; // ? Error here but the code still works fine
 import About from './components/About';
+import Distribution from './components/Distribution';
 
 import reportWebVitals from './reportWebVitals';
 

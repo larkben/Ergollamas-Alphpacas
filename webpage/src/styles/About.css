@@ -36,12 +36,23 @@ img {
     padding-right: 20px;
 }
 
+.rcorners1 {
+    border-radius: 25px;
+    width: 500;
+    height: 515px;
+    padding-bottom: 15px;
+}
+
 /* End of Display Image Text */
 
 /* Start of Typing Effects */
 
 .css-fix {
   white-space: pre-wrap; /* or pre-line */
+}
+
+.typed-cursor {
+  opacity: 0;
 }
 
 /* End of cursor + typing */
