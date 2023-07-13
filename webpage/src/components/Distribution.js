@@ -7,12 +7,22 @@ function Distribution() {
             <div>
                 <div className='Text-Distribution Header' >
                     <div>
-                        <h1> A little bit about how we started... </h1>
-                        <table>
-                            <li> 128 ALPHpacas went to <a href='https://www.skyharbor.io/collection/ergollamas'> Ergollama Minters</a>. </li>
-                            <li> 10% of 1024 went towards present and future giveaways and raffles (102). </li>
-                            <li> The rest went for sale @ 12 ALPH each (922) with no curve. </li>
-                        </table>
+                        <div>
+                            <div className='container'>
+                                <div className='text Distribution rcorners2'>
+                                    <p> Distribution </p>
+                                    <div>
+
+                                    </div>
+                                </div>
+                                <div className='text Specifications rcorners2'> 
+                                    <p> Royalties </p>
+                                    <div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -20,4 +30,4 @@ function Distribution() {
     )
 }
 
-export default Distribution
+export default Distribution;

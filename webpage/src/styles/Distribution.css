@@ -13,8 +13,49 @@
     font-size: 30px;
 }
 
-li {
-    padding: 15px;
+/* Display Image Text Container */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+img {
+    max-width: 100%
+}
+  
+.image {
+    flex-basis: 40%
+}
+  
+.text {
+    font-size: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.rcorners2 {
+    border-radius: 25px;
+    width: 500px;
+    height: 515px;
+    padding-bottom: 15px;
+}
+
+/* End of Display Image Text */
+
+.Distribution {
+    background-color: rgb(243, 97, 0);
+    margin: 30px;
     color: white;
+    text-align: center;
+    font-family: monospace;
+}
+
+.Specifications {
+    background-color: rgb(245, 82, 7);
+    color: white;
+    text-align: center;
+    font-family: monospace;
 }
 
